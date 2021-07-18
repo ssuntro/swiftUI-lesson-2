@@ -17,8 +17,8 @@ struct ContentView: View {
                 Image("diceeLogo")
                 Spacer() //evently distributed on the screen
                 HStack {
-                    DiceView(face: 1)
-                    DiceView(face: 1)
+                    DiceView(pips: 1)
+                    DiceView(pips: 1)
                 }.padding(.horizontal)
                 Spacer()
                 Button(action: {}) {
@@ -41,9 +41,9 @@ struct ContentView_Previews: PreviewProvider {
 }
 
 struct DiceView: View {
-    let face: Int
+    let pips: Int
     var body: some View {
-        Image("dice\(face)")
+        Image("dice\(pips)")
             .resizable()
             .aspectRatio(1, contentMode: .fit)
             .padding()
